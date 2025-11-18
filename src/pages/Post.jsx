@@ -36,11 +36,20 @@ export default function Post() {
         <div className="mt-16 w-full">
             <Container>
                 <div className=" w-full max-w-sm  mx-auto flex justify-center mb-4 relative border rounded-xl p-2">
-                    <img
-                        src={appwriteService.getFilePreview(post.featuredImage)}
-                        alt={post.title}
-                        className="rounded-xl w-full h-auto object-cover"
-                    />
+                     {(() => {
+        const url = appwriteService.getFileDownload(post.featuredImage);
+        const imageUrl = url.includes("?")
+            ? url + "&mode=admin"
+            : url + "?mode=admin";
+
+        return (
+            <img
+                src={imageUrl}
+                alt={post.title}
+                className="rounded-xl w-full h-auto object-cover"
+            />
+        );
+    })()}
 
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
