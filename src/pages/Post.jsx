@@ -33,13 +33,13 @@ export default function Post() {
     };
 
     return post ? (
-        <div className="py-8 ">
+        <div className="mt-16 w-full">
             <Container>
-                <div className=" w-[100px] h-[100px]  flex justify-center mb-4 relative border rounded-xl p-2">
+                <div className=" w-full max-w-sm  mx-auto flex justify-center mb-4 relative border rounded-xl p-2">
                     <img
-                        src={appwriteService.getFilePreview(post.featuredImage)+ "&mode=admin"}
+                        src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
-                        className="rounded-xl"
+                        className="rounded-xl w-full h-auto object-cover"
                     />
 
                     {isAuthor && (
