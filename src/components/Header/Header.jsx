@@ -129,8 +129,8 @@ function Header({ onToggle }) {
         <Search/>
       </div>
          {authStatus && (
-            <div onClick={goToHome} className=' min-w-[100px] gap-1 justify-center items-center text-white flex-shrink-0 
-             hidden sm:flex  px-2 py-1 bg-white/20 rounded-2xl mr-2 hover:bg-white/40'>
+            <div onClick={goToHome} className=' min-w-[100px] gap-1 justify-center items-center text-black dark:text-white flex-shrink-0 
+             hidden sm:flex  px-2 py-1 bg-black/20 dark:bg-white/20 rounded-2xl mr-2 dark:hover:bg-white/40 hover:bg-black/40'>
             <ImagePlus/>
             <p>create</p>
           </div>

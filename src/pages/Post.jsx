@@ -33,9 +33,9 @@ export default function Post() {
     };
 
     return post ? (
-        <div className="mt-16 w-full">
+        <div className="mt-16 w-full flex flex-auto">
             <Container>
-                <div className=" w-full max-w-sm  mx-auto flex justify-center mb-4 relative border rounded-xl p-2">
+                <div className=" w-full max-w-sm mx-auto flex justify-center mb-4 relative rounded-xl p-2">
                      {(() => {
         const url = appwriteService.getFileDownload(post.featuredImage);
         const imageUrl = url.includes("?")
@@ -46,13 +46,13 @@ export default function Post() {
             <img
                 src={imageUrl}
                 alt={post.title}
-                className="rounded-xl w-full h-auto object-cover"
+                className="rounded-xl h-auto object-cover w-[300px]"
             />
         );
     })()}
 
                     {isAuthor && (
-                        <div className="absolute right-6 top-6">
+                        <div className="absolute right-12 top-6">
                             <Link to={`/edit-post/${post.$id}`}>
                                 <Button bgColor="bg-green-500" className="mr-3">
                                     Edit
@@ -64,10 +64,10 @@ export default function Post() {
                         </div>
                     )}
                 </div>
-                <div className="w-full mb-6">
+                <div className="w-full mb-6 flex flex-1">
                     <h1 className="text-2xl font-bold">{post.title}</h1>
                 </div>
-                <div className="browser-css">
+                <div className="flex flex-col flex-auto p-1 w-[90vw]">
                     {parse(post.content)}
                     </div>
             </Container>

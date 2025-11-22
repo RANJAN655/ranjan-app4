@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/config";
 import {Container, PostCard} from '../components'
+import PostCar from '../components/like/PostCar';
 
 function Home() {
     const [posts, setPosts] = useState([])
@@ -9,6 +10,7 @@ function Home() {
         appwriteService.getPosts().then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
+                // {console.log(posts) }
             }
         })
     }, [])
@@ -33,8 +35,9 @@ function Home() {
             <Container>
                 <div className='flex flex-wrap '>
                     {posts.map((post) => (
-                        <div key={post.$id} className='flex  flex-auto w-[300px] h-auto'>
+                        <div key={post.$id} className='flex flex-col  flex-auto w-[300px] h-auto'>
                             <PostCard {...post} />
+                            <PostCar{...post}/>
                         </div>
                     ))}
                 </div>

@@ -15,7 +15,7 @@ function AllPosts() {
         <Container>
             <div className='flex flex-wrap'>
                 {posts.map((post) => (
-                    <div key={post.$id} className='flex flex-auto w-[450px]'>
+                    <div key={post.$id} className='flex flex-auto w-[300px] h-auto'>
                         <PostCard {...post} />
                     </div>
                 ))}

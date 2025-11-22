@@ -84,11 +84,11 @@ function Sidebar() {
       {/* ✔ show button */}
       <div
         onClick={() => navigate(item.slug)}
-        className=" flex justify-center items-center flex-col px-3 py-2.5  transition-all duration-75 
+        className=" flex justify-center items-center flex-col px-3 py-0 transition-all duration-75 
          dark:hover:bg-white/20 hover:bg-black/40  rounded-xl"
       >
-        {Icon && <Icon size={22} className="text-black dark:text-white font-extrabold" aria-hidden="true" />}
-       <p className="text-[10px] mt-1 text-black dark:text-white">{item.name}</p>
+        {Icon && <Icon size={20} className="text-black dark:text-white font-extrabold" aria-hidden="true" />}
+       <p className="text-[9px] mt-1 text-black dark:text-white">{item.name}</p>
       </div>
 
     </li>
