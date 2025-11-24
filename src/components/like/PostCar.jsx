@@ -67,8 +67,8 @@ export default function PostCard(props) {
         <SubscribeBtn channelId={props.userId} />
 
         
-        <button onClick={handleShare} className="px-3 py-1 rounded bg-blue-500 text-white">Share</button>
-        <Link to={`/post/${$id}`} className="px-3 py-1 rounded bg-gray-100">Read</Link>
+        <button onClick={handleShare} className=" font-bold px-2 py-1 rounded-full bg-black/30 dark:bg-white/40  text-white">Share</button>
+        <Link to={`/post/${$id}`} className="px-3 py-1 rounded-full bg-black/35 dark:bg-white/40 text-white font-bold">Read</Link>
 
         
       </div>

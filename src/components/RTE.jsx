@@ -70,7 +70,7 @@ export default function RTE({
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full  flex-auto mt-12 font-bold text-black">
       {label && <label className="inline-block mb-1 pl-1">{label}</label>}
       <Controller
         name={name}

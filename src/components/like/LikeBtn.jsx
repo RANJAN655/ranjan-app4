@@ -83,11 +83,13 @@ export default function LikeButton({ postId }) {
     <button
       onClick={toggleLike} // click handler
       disabled={loading} // disable while initial loading
-      className="px-3 py-1 rounded flex items-center gap-2"
+      className={` font-bold text-5 px-2 py-1 rounded-full flex items-center gap-2  bg-black/40 dark:bg-white/40
+        ${liked? "bg-green-200 text-black dark:bg-green-200 dark:text-black": " "}
+        `}
       aria-pressed={liked} // accessibility
     >
       {/* show thumbs up and text based on liked state */}
-      <span>{liked ? "👍 Liked" : "👍 Like"}</span>
+      <span>{liked ? "👍" : "👍"}</span>
       {/* show count */}
       <span className="text-sm opacity-70"> {count} </span>
     </button>

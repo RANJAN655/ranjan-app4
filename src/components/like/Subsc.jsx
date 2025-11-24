@@ -68,11 +68,11 @@ export default function SubscribeBtn({ channelId }) {
       onClick={toggleSubscribe}
       className={
         subscribed
-          ? "px-4 py-1 rounded-full bg-green-600"
+          ? "px-4 py-1 rounded-full bg-green-600 "
           : "px-4 py-1 rounded-full bg-red-600 text-white"
       }
     >
-      {subscribed ? "Subscribed ✓" : "Subscribe"} • {subsCount}
+      {subscribed ? "follow" : "unfollow"} • {subsCount}
     </button>
   );
 }
