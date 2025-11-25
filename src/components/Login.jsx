@@ -5,6 +5,7 @@ import {Button, Input, Logo} from "./index"
 import {useDispatch} from "react-redux"
 import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
+import companyLogo from "../assets/companyLogo.png"
 
 function Login() {
     const navigate = useNavigate()
@@ -32,20 +33,20 @@ function Login() {
 
   return (
     <div
-    className='flex items-center justify-center w-full'
+    className='flex items-center justify-center w-full '
     >
-        <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
-        <div className="mb-2 flex justify-center">
+        <div className={`mx-auto mt-16 w-full max-w-lg bg-gray-400 dark:bg-black/70 rounded-xl p-10 border border-black/10`}>
+        <div className="mb-2 w-full flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                    <img src={companyLogo} alt="" className=' h-[clamp(80px,1vw,128px)] w-auto' />
                     </span>
         </div>
-        <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <h2 className=" text-black dark:text-white text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
+        <p className="mt-2 text-center text-base text-black dark:text-white">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-primary transition-all duration-200 hover:underline text-black dark:text-white"
                     >
                         Sign Up
                     </Link>
@@ -55,6 +56,8 @@ function Login() {
             <div className='space-y-5'>
                 <Input
                 label="Email: "
+                labelclass = " text-black dark:text-white font-bold"
+                className =" text-black dark:text-white font-bold"
                 placeholder="Enter your email"
                 type="email"
                 {...register("email", {
@@ -67,6 +70,8 @@ function Login() {
                 />
                 <Input
                 label="Password: "
+                labelclass =" text-black dark:text-white font-bold"
+                className = "text-black font-bold"
                 type="password"
                 placeholder="Enter your password"
                 {...register("password", {

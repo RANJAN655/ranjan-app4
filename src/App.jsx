@@ -35,12 +35,16 @@ function App() {
 
         <div className="flex  w-full transition-all duration-300 h-auto">
           {/* Sidebar */}
-          <Sidebar sidebarOpen={sidebarOpen}  />
+          <Sidebar 
+               className={`${sidebarOpen ? "max-[800px]:hidden" : ""}`} 
+                  sidebarOpen={sidebarOpen}
+                       />
+
 
           {/* Main content (moves when sidebar opens) */}
           <main
             className={` flex-auto transition-all duration-300 ${
-              sidebarOpen ? "ml-[240px]" : "ml-0"
+              sidebarOpen ? "ml-[240px] max-[800px]:ml-0 " : "ml-0"
             } p-2`}
           >
             <Outlet />
