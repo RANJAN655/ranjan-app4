@@ -39,12 +39,10 @@ function App() {
                className={`${sidebarOpen ? "max-[800px]:hidden" : ""}`} 
                   sidebarOpen={sidebarOpen}
                        />
-
-
           {/* Main content (moves when sidebar opens) */}
           <main
             className={` flex-auto transition-all duration-300 ${
-              sidebarOpen ? "ml-[240px] max-[800px]:ml-0 " : "ml-0"
+              sidebarOpen ? "ml-[240px] max-[800px]:ml-[70px] " : "ml-[70px]"
             } p-2`}
           >
             <Outlet />

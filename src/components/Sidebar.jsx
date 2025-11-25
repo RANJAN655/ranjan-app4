@@ -58,7 +58,7 @@ function Sidebar({ sidebarOpen,className }) {
   return (
     <>
       {/* ---------- MINI SIDEBAR (ALWAYS VISIBLE) ---------- */}
-      <aside className="W-8 mt-24 ml-1 hidden sm:flex" >
+      <aside className="fixed top-16 bg-gray-500 left-0 h-full" >
         <nav className='flex'>
           <ul className='flex flex-col gap-4 mt-5'>
 

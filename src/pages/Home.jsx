@@ -33,9 +33,9 @@ function Home() {
     return (
         <div className='w-full mt-14'>
             <Container>
-                <div className='flex flex-wrap '>
+                <div className='columns-1 sm:columns-2 lg:columns-3 gap-4 '>
                     {posts.map((post) => (
-                        <div key={post.$id} className='flex flex-col  flex-auto w-[300px] h-auto'>
+                        <div key={post.$id} className='break-inside-avoid mb-4'>
                             <PostCard {...post} />
                             <PostCar{...post}/>
                         </div>
