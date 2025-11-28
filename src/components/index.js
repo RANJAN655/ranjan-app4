@@ -17,9 +17,12 @@ import ThemeBtn from "./ThemeBtn";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import Sidebar2 from "./Sidebar2";
+import Sidebar3 from "./Sidebar3";
+
 
 export {
     Sidebar2,
+    Sidebar3,
     Header,
     Footer,
     Container,

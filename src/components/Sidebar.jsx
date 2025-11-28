@@ -58,48 +58,11 @@ function Sidebar({ sidebarOpen,className }) {
   return (
     <>
       {/* ---------- MINI SIDEBAR (ALWAYS VISIBLE) ---------- */}
-      <aside className="fixed top-16 bg-gray-500 left-0 h-full" >
-        <nav className='flex'>
-          <ul className='flex flex-col gap-4 mt-5'>
-
-            {navItems.map((item) => {
-
-  // ❗ Only show items that are active
-  if (!item.active) return null;
-
-  // ✔ Always store icon for matching item
-  const Icon = iconMap[item.name];
-
-  return (
-    <li key={item.name} className="flex flex-col items-center gap-2">
-
-      {/* ✔ show icon */}
-      {/* {Icon && <Icon size={20} className="text-white" aria-hidden="true" />} */}
-
-      {/* ✔ show button */}
-      <button
-        onClick={() => navigate(item.slug)}
-        className=" flex justify-center items-center flex-col px-3 py-2.5 duration-200 bg-transparent  hover:bg-white/20 transition-all duration-75 rounded-xl"
-      >
-        {Icon && <Icon size={22} className="text-white" aria-hidden="true" />}
-       <p className="text-[10px] mt-1">{item.name}</p>
-      </button>
-
-    </li>
-  );
-})}
-
-          </ul>
-          
-        </nav>
-
-
-        
-        </aside>
+      
      
       {/* ---------- FULL SIDEBAR (ONLY WHEN OPEN) ---------- */}
       <aside
-        className={` fixed top-6 left-0 h-full
+        className={`z-10 fixed top-6 left-0 h-full
           bg-[#212121] w-[240px]   transition-all  duration-300
           
           ${sidebarOpen ? "translate-x-0 translate-y-11" : "-translate-x-full"}
